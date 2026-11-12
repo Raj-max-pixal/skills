@@ -168,6 +168,8 @@ const closedX = reduce ? 0 : '-100%';
 
 Reduced motion means **fewer and gentler** animations, not zero — keep transitions that aid comprehension, remove movement and position changes.
 
+Stop continuous decorative motion such as marquees and pulsing accents when reduced motion is requested; it has no state change to communicate. For a meaningful state change, keep a short opacity or color transition if it remains clear without movement. Avoid leaving an infinite animation running at a faster speed: reducing its duration can make it more distracting.
+
 ## Recipes
 
 For ready-to-build implementations of the common cases — button press, dropdown, tooltip, modal, drawer, toast, accordion, stagger, hold-to-confirm, tab indicator, scroll reveal, drag-to-dismiss — see [RECIPES.md](RECIPES.md). Load it whenever the request matches one of those components; start from the recipe rather than from a blank file.
